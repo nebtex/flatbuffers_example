@@ -1,6 +1,4 @@
 .build/
-js/
-Chat/
 node_modules/
 *.so
 package-lock.*
