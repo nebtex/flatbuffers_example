@@ -1,0 +1,11 @@
+include "User.fbs";
+
+namespace Chat.Sample;
+
+table Group {
+	name:string;
+	Users:[User];
+	maxSize:int = 50;
+}
+
+root_type Group;

@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "runMake": "make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nebtex/flatbuffers_example.git"
+  },
+  "author": "Leonardo Javier Esparis Meza",
+  "license": "MIT",
+  "devDependencies": {
+    "flatbuffers": "^1.7.0"
+  }
+}

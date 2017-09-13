@@ -1,0 +1,40 @@
+namespace Chat.Sample;
+
+enum Country : byte {
+	UnitedState = 1,
+	Argentina,
+	Colombia,
+	Venezuela,
+	Peru,
+	Ecuador,
+	Canada,
+	Italia,
+	Chile,
+}
+
+enum EmailHost : byte {
+	Gmail = 1,
+	Hotmail,
+	Yahoo,
+	Other,	
+}
+
+enum Type : byte {
+	Admin = 1,
+	Normal
+}
+
+table User {
+	first_name:string;
+	last_name:string;
+	address1:string;
+	address2:string;
+	phone:string;
+	age:short;
+	email:string;
+	emailHost:EmailHost = Gmail;
+	country:Country = UnitedState;
+	userType:Type = Normal;
+}
+
+root_type User;
