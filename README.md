@@ -10,7 +10,7 @@ Group, then write data into the buffer
 and send those bytes to a nodejs client.
 
 ### How to run
-```make```
+```make PORT=3001```
 
 ### License
 [Apache license 2.0](./LICENSE.txt)
