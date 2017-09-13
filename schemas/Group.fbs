@@ -4,7 +4,7 @@ namespace Chat.Sample;
 
 table Group {
 	name:string;
-	Users:[User];
+	users:[User];
 	maxSize:int = 50;
 }
 
