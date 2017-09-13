@@ -1,10 +1,11 @@
+PORT=3000
 CURRENT_DIR=$(shell pwd)
 GOLANG_MAIN=$(CURRENT_DIR)/cmd/main.go
 GOLANG_MAIN_BUILD=$(CURRENT_DIR)/.build
 
 all: compile_main compile_js
-	$(GOLANG_MAIN_BUILD)/main > data.bytes
-	@node index.js $(CURRENT_DIR)/data.bytes
+	PORT=$(PORT) ./server/http-daemon.js
+	PORT=$(PORT) $(GOLANG_MAIN_BUILD)/main
 
 compile_js:js_dep
 	@flatc -o $(CURRENT_DIR)/js -s $(CURRENT_DIR)/schemas/User.fbs $(CURRENT_DIR)/schemas/Group.fbs
